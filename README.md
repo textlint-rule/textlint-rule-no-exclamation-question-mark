@@ -6,7 +6,7 @@ textlint rule that disallow exclamation and question mark.
 
 Install with [npm](https://www.npmjs.com/):
 
-  npm i textlint-rule-no-exclamation-question-mark
+    npm i textlint-rule-no-exclamation-question-mark
 
 ## Usage
 
@@ -59,7 +59,7 @@ See [Releases page](https://github.com/azu/textlint-rule-no-exclamation-question
 
 Install devDependencies and Run `npm test`:
 
-  npm i -d && npm test
+    npm i -d && npm test
 
 ## Contributing
 
