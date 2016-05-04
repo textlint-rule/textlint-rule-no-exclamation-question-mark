@@ -1,4 +1,4 @@
-# textlint-rule-no-exclamation-question-mark
+# textlint-rule-no-exclamation-question-mark [![Build Status](https://travis-ci.org/azu/textlint-rule-no-exclamation-question-mark.svg?branch=master)](https://travis-ci.org/azu/textlint-rule-no-exclamation-question-mark)
 
 textlint rule that disallow exclamation and question mark.
 
