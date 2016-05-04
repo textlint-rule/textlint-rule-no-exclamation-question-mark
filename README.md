@@ -75,7 +75,7 @@ For bugs and feature requests, [please create an issue](https://github.com/azu/t
 ## Author
 
 - [github/azu](https://github.com/azu)
-- [twitter/azu_re]http://twitter.com/azu_re)
+- [twitter/azu_re](http://twitter.com/azu_re)
 
 ## License
 
