@@ -24,14 +24,14 @@ Via `.textlintrc`.
 
 Defaults: Not allow to use `!?！？`.
 
-- "allowHalfWidthExclamation": false,
+- `allowHalfWidthExclamation`: false,
     - allow to use !
-- "allowFullWidthExclamation": false,
+- `allowFullWidthExclamation`: false,
     - allow to use ！
-- "allowHalfWidthQuestion": false,
+- `allowHalfWidthQuestion`: false,
     - allow to use ?
-- "allowFullWidthQuestion": false
-    - // allow to use ？
+- `allowFullWidthQuestion`: false
+    - allow to use ？
 
 ```
 {
