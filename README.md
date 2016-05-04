@@ -22,7 +22,7 @@ Via `.textlintrc`.
 
 ### Options
 
-Defaults: Not allow to use `!?！？`.
+Defaults: **Not** allow to use `!?！？`.
 
 - `allowHalfWidthExclamation`: false,
     - allow to use !
