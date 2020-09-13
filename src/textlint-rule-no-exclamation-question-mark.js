@@ -39,11 +39,13 @@ module.exports = function (context, options = defaultOptions) {
              * @param {RegExp} markRegExp
              */
             const reportIfIncludeMark = (text, markRegExp) => {
-                matchCaptureGroupAll(text, markRegExp).forEach(({text, index}) => {
-                    report(node, new RuleError(`Disallow to use "${text}".`, {
-                        index
-                    }));
-                });
+                if (markRegExp !== Mark.HalfWidthExclamation || !/Yahoo!/.test(text)) {
+                    matchCaptureGroupAll(text, markRegExp).forEach(({text, index}) => {
+                        report(node, new RuleError(`Disallow to use "${text}".`, {
+                            index
+                        }));
+                    });
+                }
             };
             // Check
             if (!allowHalfWidthExclamation) {
