@@ -22,18 +22,22 @@ Via `.textlintrc`.
 
 ### Options
 
-Defaults: **Not** allow to use `!?！？`.
+Defaults: Disallows to use `!?！？`.
 
-- `allow`: ["Yahoo!"],
-    - allow words
-- `allowHalfWidthExclamation`: false,
+- `allow`: `string[]`,
+    - allow word list that suppor [RegExp-like String](https://github.com/textlint/textlint-filter-rule-allowlist#regexp-like-string)
+- `allowHalfWidthExclamation`: `boolean`
     - allow to use !
-- `allowFullWidthExclamation`: false,
+    - Default: `false`
+- `allowFullWidthExclamation`: `boolean`
     - allow to use ！
-- `allowHalfWidthQuestion`: false,
+    - Default: `false`
+- `allowHalfWidthQuestion`: `boolean`
     - allow to use ?
-- `allowFullWidthQuestion`: false
+    - Default: `false`
+- `allowFullWidthQuestion`: `boolean`
     - allow to use ？
+    - Default: `false`
 
 ```
 {
