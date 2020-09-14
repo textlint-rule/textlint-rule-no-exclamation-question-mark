@@ -17,7 +17,8 @@ tester.run("no-exclamation-question-mark", rule, {
                 // allow to use ?
                 allowHalfWidthQuestion: true
             }
-        }
+        },
+        "Yahoo!"
     ],
     invalid: [
         // single match

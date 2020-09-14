@@ -1,8 +1,26 @@
 // LICENSE : MIT
 "use strict";
 import {RuleHelper} from "textlint-rule-helper";
+import {matchPatterns} from "@textlint/regexp-string-matcher";
 import {matchCaptureGroupAll} from "match-index"
+
+/**
+ * if actual is in the `matchPatternResults`, return true
+ * @param {matchPatternResult[]} matchPatternResults
+ * @param {MatchCaptureGroup} actual
+ * @returns {boolean}
+ */
+const isIgnoredRange = (matchPatternResults, actual) => {
+    return matchPatternResults.some(result => {
+        return result.startIndex <= actual.index && actual.index <= result.endIndex;
+    });
+};
+
 const defaultOptions = {
+    // allow words
+    "allow": [
+        "Yahoo!"
+    ],
     // allow to use !
     "allowHalfWidthExclamation": false,
     // allow to use ！
@@ -22,6 +40,7 @@ const Mark = {
 module.exports = function (context, options = defaultOptions) {
     const {Syntax, RuleError, report, getSource} = context;
     const helper = new RuleHelper(context);
+    const allow = options.allow || defaultOptions.allow;
     const allowHalfWidthExclamation = options.allowHalfWidthExclamation || defaultOptions.allowHalfWidthExclamation;
     const allowFullWidthExclamation = options.allowFullWidthExclamation || defaultOptions.allowFullWidthExclamation;
     const allowHalfWidthQuestion = options.allowHalfWidthQuestion || defaultOptions.allowHalfWidthQuestion;
@@ -39,7 +58,15 @@ module.exports = function (context, options = defaultOptions) {
              * @param {RegExp} markRegExp
              */
             const reportIfIncludeMark = (text, markRegExp) => {
-                matchCaptureGroupAll(text, markRegExp).forEach(({text, index}) => {
+                const ignoreMatch = matchPatterns(text, allow);
+                matchCaptureGroupAll(text, markRegExp).forEach((actual) => {
+                    const {text, index} = actual;
+
+                    // 無視する単語を含んでいるなら無視
+                    if (isIgnoredRange(ignoreMatch, actual)) {
+                        return;
+                    }
+
                     report(node, new RuleError(`Disallow to use "${text}".`, {
                         index
                     }));
