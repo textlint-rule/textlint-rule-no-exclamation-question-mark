@@ -38,6 +38,7 @@
     "textlint-tester": "^1.2.0"
   },
   "dependencies": {
+    "@textlint/regexp-string-matcher": "^1.1.0",
     "match-index": "^1.0.1",
     "textlint-rule-helper": "^1.1.5"
   }

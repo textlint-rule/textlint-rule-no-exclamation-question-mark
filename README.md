@@ -24,6 +24,8 @@ Via `.textlintrc`.
 
 Defaults: **Not** allow to use `!?！？`.
 
+- `allow`: ["Yahoo!"],
+    - allow words
 - `allowHalfWidthExclamation`: false,
     - allow to use !
 - `allowFullWidthExclamation`: false,
@@ -37,6 +39,10 @@ Defaults: **Not** allow to use `!?！？`.
 {
     "rules": {
         "no-exclamation-question-mark": {
+            // allow words
+            "allow": [
+                "Yahoo!"
+            ],
             // allow to use !
             "allowHalfWidthExclamation": false,
             // allow to use ！
