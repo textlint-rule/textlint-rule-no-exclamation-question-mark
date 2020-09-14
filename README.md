@@ -26,6 +26,8 @@ Defaults: Disallows to use `!?！？`.
 
 - `allow`: `string[]`,
     - allow word list that suppor [RegExp-like String](https://github.com/textlint/textlint-filter-rule-allowlist#regexp-like-string)
+    - some unique noun is allowed by default
+    - Default: `[]`
 - `allowHalfWidthExclamation`: `boolean`
     - allow to use !
     - Default: `false`

@@ -16,7 +16,7 @@ const isIgnoredRange = (matchPatternResults, actual) => {
     });
 };
 
-const DEFAULT_ALLOW_LIST = ["Yahoo!"];
+const BUILTIN_ALLOW_LIST = ["Yahoo!"];
 const defaultOptions = {
     // allow words
     allow: [],
@@ -39,7 +39,7 @@ const Mark = {
 module.exports = function (context, options = defaultOptions) {
     const { Syntax, RuleError, report, getSource } = context;
     const helper = new RuleHelper(context);
-    const allow = (options.allow || defaultOptions.allow).concat(DEFAULT_ALLOW_LIST);
+    const allow = (options.allow || defaultOptions.allow).concat(BUILTIN_ALLOW_LIST);
     const allowHalfWidthExclamation = options.allowHalfWidthExclamation || defaultOptions.allowHalfWidthExclamation;
     const allowFullWidthExclamation = options.allowFullWidthExclamation || defaultOptions.allowFullWidthExclamation;
     const allowHalfWidthQuestion = options.allowHalfWidthQuestion || defaultOptions.allowHalfWidthQuestion;
