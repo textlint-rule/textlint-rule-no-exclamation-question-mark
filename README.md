@@ -1,4 +1,4 @@
-# textlint-rule-no-exclamation-question-mark [![Build Status](https://travis-ci.org/azu/textlint-rule-no-exclamation-question-mark.svg?branch=master)](https://travis-ci.org/azu/textlint-rule-no-exclamation-question-mark)
+# textlint-rule-no-exclamation-question-mark [![Build Status](https://travis-ci.org/textlint-rule/textlint-rule-no-exclamation-question-mark.svg?branch=master)](https://travis-ci.org/textlint-rule/textlint-rule-no-exclamation-question-mark)
 
 textlint rule that disallow exclamation and question mark.
 
@@ -59,7 +59,7 @@ Defaults: **Not** allow to use `!?！？`.
 
 ## Changelog
 
-See [Releases page](https://github.com/azu/textlint-rule-no-exclamation-question-mark/releases).
+See [Releases page](https://github.com/textlint-rule/textlint-rule-no-exclamation-question-mark/releases).
 
 ## Running tests
 
@@ -70,7 +70,7 @@ Install devDependencies and Run `npm test`:
 ## Contributing
 
 Pull requests and stars are always welcome.
-For bugs and feature requests, [please create an issue](https://github.com/azu/textlint-rule-no-exclamation-question-mark/issues).
+For bugs and feature requests, [please create an issue](https://github.com/textlint-rule/textlint-rule-no-exclamation-question-mark/issues).
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
