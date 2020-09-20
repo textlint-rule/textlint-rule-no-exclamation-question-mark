@@ -25,7 +25,7 @@ Via `.textlintrc`.
 Defaults: Disallows to use `!?！？`.
 
 - `allow`: `string[]`,
-    - allow word list that suppor [RegExp-like String](https://github.com/textlint/textlint-filter-rule-allowlist#regexp-like-string)
+    - allow word list that support [RegExp-like String](https://github.com/textlint/textlint-filter-rule-allowlist#regexp-like-string)
     - some unique noun is allowed by default
     - Default: `[]`
 - `allowHalfWidthExclamation`: `boolean`
@@ -45,7 +45,7 @@ Defaults: Disallows to use `!?！？`.
 {
     "rules": {
         "no-exclamation-question-mark": {
-            // allow words
+            // allow word list that support RegExp-like String
             "allow": [
                 "Yahoo!"
             ],
